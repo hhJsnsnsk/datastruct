@@ -79,7 +79,7 @@ public class InsertAndDeleteAlgorithm1 {
      * @return
      */
     public int deleteElement(int index) {
-        if (index < 0 || index > size) {
+        if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException("数组越界异常");
         }
         int deletedElement = array[index];
