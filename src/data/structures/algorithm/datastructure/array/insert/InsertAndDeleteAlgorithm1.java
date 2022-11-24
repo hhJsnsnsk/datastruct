@@ -8,7 +8,7 @@ public class InsertAndDeleteAlgorithm1 {
     //定义数组
     private int[] array;
 
-    /*定义数组大小size，每次插入都让size + 1，以便后续增加数组元素。构造函数初始化设置为0
+    /*定义数组大小size，每次插入都让size + 1，以便后续统计数组大小。构造函数初始化设置为0
         size即数组随着插入元素的次数随着增加，等同与数组每次插入元素，每次 + 1 ，数组大小 = size
     */
     private int size;
