@@ -76,6 +76,10 @@ public class InsertAndDeleteAndModifyAlgorithm1 {
             /* 如果为true，则表明数据将插入尾结点，即链表大小size处
             利用原有的数据last，新进来的即将成为尾结点的数据，被原有的last尾结点的next指针所指
             */
+            /*
+            试想：如果是将插入的数据赋值为last.next，insertLinkedData  = last.next;
+            这在逻辑也是可以的，但是根据实际情况，last.next指向的是 NULL
+             */
             last.next = insertLinkedData;
             // 此时原有的last(尾结点要换了)将成为新进来的插入的尾结点
             last = insertLinkedData;
