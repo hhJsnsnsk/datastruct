@@ -121,6 +121,8 @@ public class InsertAndDeleteAndModifyAlgorithm1 {
             removedLinked = last; 并且利用好next属性 */
             Node newLastNode = getNode(index - 1);
             removedLinkedNode = newLastNode.next;
+            // 新的尾结点的next必须指向NULL
+            newLastNode.next = null;
             last = newLastNode;
         } else {
             /* 删除中间的结点
