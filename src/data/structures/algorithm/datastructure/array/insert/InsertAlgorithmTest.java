@@ -17,14 +17,14 @@ public class InsertAlgorithmTest {
      *
      * @param index    插入的索引
      * @param element  插入的元素
-     *                 判断插入的索引和元素是否符合标准
+     *                 判断插入的索引是否符合标准
      *                 再进行挪位和最终插入元素
      */
     public void insert(int index, int element) {
         if (index < 0 || index > size) {
             throw new IndexOutOfBoundsException("the array's size has out of bounds ");
         }
-        // from right to left circle ,and make the element move to one position one by one
+        // from right to left circle ,and make the element move a position one by one
         for (int i = size - 1; i >= index; i--) {
             array[i + 1] = array[i];
         }
