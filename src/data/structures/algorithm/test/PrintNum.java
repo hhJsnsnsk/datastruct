@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * Printing numbers pages for MI
- * @author Administrator
+ * @author Starry Sky
  */
 public class PrintNum {
 
