@@ -11,7 +11,7 @@ public class PrintNum {
     /**
      * 打印的纸张数
      */
-    private static final int NUM_PAGES = 5;
+    private static final int NUM_PAGES = 20;
 
     /**
      * 开始页码
@@ -20,8 +20,11 @@ public class PrintNum {
 
     public static void main(String[] args) {
         int[] array = new int[NUM_PAGES];
+        long start = System.currentTimeMillis();
         System.out.println("正面打印页码：" + Arrays.toString(new PrintNum().printOddNumbers(START_PAGES,array)));
         System.out.println("反面打印页码：" + Arrays.toString(new PrintNum().printEvenNumbers(START_PAGES,array)));
+        long end = System.currentTimeMillis();
+        System.out.println("执行耗时：" + (end - start) + "毫秒");
     }
 
     /**
