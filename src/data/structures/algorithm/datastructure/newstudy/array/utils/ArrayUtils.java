@@ -20,6 +20,7 @@ public class ArrayUtils {
 
     /**
      * 增加 一个 数组元素
+     *
      * @param element 数组元素数据
      */
     public void addElement(int element) {
@@ -33,6 +34,28 @@ public class ArrayUtils {
         newArr[getSize()] = element;
         // 将新数组复制到旧数组 完成替换
         array = newArr;
+    }
+
+    /**
+     * 删除指定索引的元素
+     *
+     * @param index 需要删除的数据所在的索引
+     * @return 成功返回 1 失败返回 0
+     */
+    public int deleteElement(int index) {
+        // 创建新数组
+        int[] newArr = new int[array.length - 1];
+        // 遍历新数组，将旧数组需要的元素复制
+        for (int i = 0; i < newArr.length; i++) {
+            if (i < index) {
+                newArr[i] = array[i];
+            } else {
+                newArr[i] = array[i + 1];
+            }
+        }
+        // 将新数组 替换 到 旧数组
+        array = newArr;
+        return 1;
     }
 
     /**

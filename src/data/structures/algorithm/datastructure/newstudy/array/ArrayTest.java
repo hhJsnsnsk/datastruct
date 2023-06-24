@@ -15,5 +15,8 @@ public class ArrayTest {
         utils.addElement(10);
         System.out.println(utils.getSize());
         utils.printArray();
+        int deleted = utils.deleteElement(2);
+        int deleted2 = utils.deleteElement(3);
+        utils.printArray();
     }
 }
