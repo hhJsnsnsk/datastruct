@@ -37,12 +37,41 @@ public class ArrayUtils {
     }
 
     /**
+     * 插入元素到指定索引
+     *
+     * @param index   插入索引位置
+     * @param element 插入的元素数据
+     * @return 返回 1 成功 0 失败
+     */
+    public boolean insertElement(int index, int element) {
+        if (index < 0 || index == array.length) {
+            throw new ArrayIndexOutOfBoundsException("数组越界异常");
+        }
+        // 新建数组
+        int[] newArr = new int[array.length + 1];
+        // 遍历原数组，将其元素赋值到新数组 除了需要插入的索引位置外
+        for (int i = 0; i < array.length; i++) {
+            if (i<index) {
+                newArr[i] = array[i];
+            }else {
+                // 插入的索引之后的元素 赋值
+                newArr[i + 1] = array[i];
+            }
+        }
+        // 此时index元素为0，可以将其赋值
+        newArr[index] = element;
+        // 将新数组复制到原数组
+        array = newArr;
+        return true;
+    }
+
+    /**
      * 删除指定索引的元素
      *
      * @param index 需要删除的数据所在的索引
      * @return 成功返回 1 失败返回 0
      */
-    public int deleteElement(int index) {
+    public void deleteElement(int index) {
         // 创建新数组
         int[] newArr = new int[array.length - 1];
         // 遍历新数组，将旧数组需要的元素复制
@@ -55,7 +84,8 @@ public class ArrayUtils {
         }
         // 将新数组 替换 到 旧数组
         array = newArr;
-        return 1;
+
+
     }
 
     /**
@@ -73,6 +103,6 @@ public class ArrayUtils {
     public void printArray() {
         System.out.println(Arrays.toString(array));
     }
-
-
 }
+
+
