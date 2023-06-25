@@ -9,7 +9,7 @@ import data.structures.algorithm.datastructure.newstudy.array.utils.SearchUtils;
  */
 public class ArrayTest {
 
-    private static final int[] ARRAY_TEST = new int[]{99,99,98,97,96,95,94,93,92,91,90,0,0,1,1,2,2,33,44,55,6};
+    private static final int[] ARRAY_LINER_TEST = new int[]{99,99,98,97,96,95,94,93,92,91,90,0,0,1,1,2,2,33,44,55,6};
 
     public static void main(String[] args) {
         ArrayUtils utils = new ArrayUtils();
@@ -25,6 +25,6 @@ public class ArrayTest {
         utils.printArray();
         System.out.println(utils.getElement(4));
         System.out.println("======================");
-        System.out.println(su.linerSearchElement(99, ARRAY_TEST));
+        System.out.println(su.linerSearchElement(99, ARRAY_LINER_TEST));
     }
 }
