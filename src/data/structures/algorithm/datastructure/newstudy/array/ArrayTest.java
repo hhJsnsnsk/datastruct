@@ -16,8 +16,8 @@ public class ArrayTest {
         System.out.println(utils.getSize());
         utils.printArray();
         utils.printArray();
-        utils.insertElement(39,88);
+        utils.insertElement(3,88);
         utils.printArray();
-
+        System.out.println(utils.getElement(4));
     }
 }

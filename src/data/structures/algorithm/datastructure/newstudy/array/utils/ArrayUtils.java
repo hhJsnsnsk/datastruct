@@ -11,6 +11,7 @@ import java.util.Arrays;
 public class ArrayUtils {
     /**
      * 定义数组
+     * define array
      */
     private int[] array;
 
@@ -20,7 +21,7 @@ public class ArrayUtils {
 
     /**
      * 增加 一个 数组元素
-     *
+     * add an array element
      * @param element 数组元素数据
      */
     public void addElement(int element) {
@@ -38,7 +39,7 @@ public class ArrayUtils {
 
     /**
      * 插入元素到指定索引
-     *
+     * Insert element at specified index
      * @param index   插入索引位置
      * @param element 插入的元素数据
      */
@@ -65,7 +66,7 @@ public class ArrayUtils {
 
     /**
      * 删除指定索引的元素
-     *
+     * Delete the element at the specified position
      * @param index 需要删除的数据所在的索引
      * @return 成功返回 1 失败返回 0
      */
@@ -88,11 +89,21 @@ public class ArrayUtils {
 
     /**
      * 返回数组长度
-     *
+     * Returns the length of the array
      * @return array's length
      */
     public int getSize() {
         return array.length;
+    }
+
+    /**
+     * 取出指定位置的数组元素
+     * Get the array element at the specified position
+     * @param index 索引位置
+     * @return 返回指定索引数据
+     */
+    public int getElement(int index) {
+        return array[index];
     }
 
     /**
