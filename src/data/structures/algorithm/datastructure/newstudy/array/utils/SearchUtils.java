@@ -39,7 +39,7 @@ public class SearchUtils {
      * @param array  输入数组  ARRAY IS inputted
      * @return index
      */
-    public int binarySearchElement(int number, int[] array) {
+    public int binarySearchElement(int number, int @org.jetbrains.annotations.NotNull [] array) {
         // 索引位置 index position
         int index = -1;
         // 开始位置 (基于索引)
