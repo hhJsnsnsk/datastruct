@@ -68,7 +68,6 @@ public class ArrayUtils {
      * 删除指定索引的元素
      * Delete the element at the specified position
      * @param index 需要删除的数据所在的索引
-     * @return 成功返回 1 失败返回 0
      */
     public void deleteElement(int index) {
         // 创建新数组
