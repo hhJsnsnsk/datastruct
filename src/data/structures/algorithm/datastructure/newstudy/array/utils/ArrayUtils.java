@@ -41,9 +41,8 @@ public class ArrayUtils {
      *
      * @param index   插入索引位置
      * @param element 插入的元素数据
-     * @return 返回 1 成功 0 失败
      */
-    public boolean insertElement(int index, int element) {
+    public void insertElement(int index, int element) {
         if (index < 0 || index == array.length) {
             throw new ArrayIndexOutOfBoundsException("数组越界异常");
         }
@@ -62,7 +61,6 @@ public class ArrayUtils {
         newArr[index] = element;
         // 将新数组复制到原数组
         array = newArr;
-        return true;
     }
 
     /**
