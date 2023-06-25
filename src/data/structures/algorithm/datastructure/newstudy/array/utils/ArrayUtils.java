@@ -107,6 +107,16 @@ public class ArrayUtils {
     }
 
     /**
+     * Modifies the element at the specified position
+     * 修改指定索引的元素
+     * @param index 索引
+     * @param element 新数组元素
+     */
+    public void setArrayElement(int index,int element) {
+        array[index] = element;
+    }
+
+    /**
      * 打印数组
      */
     public void printArray() {
