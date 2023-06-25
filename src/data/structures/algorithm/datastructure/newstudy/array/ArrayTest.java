@@ -25,6 +25,6 @@ public class ArrayTest {
         utils.printArray();
         System.out.println(utils.getElement(4));
         System.out.println("======================");
-        System.out.println(su.searchElement(99, ARRAY_TEST));
+        System.out.println(su.linerSearchElement(99, ARRAY_TEST));
     }
 }

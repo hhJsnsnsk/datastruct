@@ -13,7 +13,7 @@ public class SearchUtils {
      * @param number 需要查询的数据 The data to be queried
      * @return 返回索引值 return index value
      */
-    public int searchElement(int number,int[] array) {
+    public int linerSearchElement(int number,int[] array) {
         // 对索引赋值，-1 为不存在
         int index = -1;
         // 遍历原数组，查询是否存在指定数据data，存在则将index赋值为指定的索引值
