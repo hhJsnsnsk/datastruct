@@ -26,6 +26,6 @@ public class ArrayTest {
         System.out.println(utils.getElement(4));
         System.out.println("======================");
         System.out.println(su.linerSearchElement(99, ARRAY_LINER_TEST));
-        System.out.println(su.binarySearchElement(7, ARRAY_BINARY_TEST));
+        System.out.println(su.binarySearchElement(5, ARRAY_BINARY_TEST));
     }
 }
