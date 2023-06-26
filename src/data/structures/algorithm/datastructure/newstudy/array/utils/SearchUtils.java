@@ -54,7 +54,7 @@ public class SearchUtils {
             if (array[mid] == number) {
                 return mid;
             }else if (begin >= end) {
-                // 查找不带元素则退出
+                // 查找不到元素则退出
                 return -1;
             } else {
                 // 目标元素小于中间元素，目标元素在左方 将 end 设置为 mid -1
