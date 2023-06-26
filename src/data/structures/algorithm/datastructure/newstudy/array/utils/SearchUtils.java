@@ -70,7 +70,6 @@ public class SearchUtils {
                 // IF there is no match at all,mid will be reassigned
                 mid = (begin + end) / 2;
             }
-
         }
     }
 }
