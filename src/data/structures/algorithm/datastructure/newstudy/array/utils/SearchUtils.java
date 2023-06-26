@@ -50,6 +50,10 @@ public class SearchUtils {
         int mid = (begin + end) / 2;
         //
         while (true) {
+            // 查找不带元素则退出
+            if(begin >= end) {
+                return -1;
+            }
             if (array[mid] == number) {
                 index = mid;
                 break;
