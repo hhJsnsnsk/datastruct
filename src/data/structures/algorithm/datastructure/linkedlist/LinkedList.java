@@ -3,7 +3,7 @@ package data.structures.algorithm.datastructure.linkedlist;
 /**
  * 链表初始化类
  * and CRUD method
- *
+ * 方法中的参数 index 为 从头节点开始 获取第 index 个 next 指针
  * @author starrysky
  */
 public class LinkedList {
@@ -21,6 +21,46 @@ public class LinkedList {
      * 链表长度
      */
     private int size;
+
+    /**
+     * 删除链表元素
+     *
+     * @param index 删除的index，注意index用于遍历 从头节点开始的 第index个 next指针对应的节点
+     * @return 返回删除链表元素后的节点
+     */
+    public Node removeLinked(int index) {
+        Node removeLinked = null;
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException("数组越界异常");
+        }
+        if (index == 0) {
+            // 删除头节点
+            removeLinked = head;
+            head = head.next;
+        } else if (index == size - 1) {
+            // 删除尾节点
+            /*
+            错误逻辑
+            removeLinked = last;
+            last = null;
+            尾节点的next才是null，而不是尾节点为null
+            */
+            Node preNode = getNode(index - 1);
+            removeLinked = preNode.next;
+            // 删除尾节点后的last节点为 原尾节点的上一个 节点，下列两行是尾节点的性质：1、指向null，定义为 last 指针
+            preNode.next = null;
+            last = preNode;
+        } else {
+            // 删除中间节点
+            // 获取前一个节点
+            Node preNode = getNode(index - 1);
+            removeLinked = preNode.next;
+            preNode.next = preNode.next.next;
+        }
+        size--;
+        return removeLinked;
+    }
+
 
     /**
      * 查找链表元素 Find linked list Element
@@ -48,8 +88,9 @@ public class LinkedList {
 
     /**
      * 在链表插入数据，分为空链表时、插入到头节点、插入到尾节点、插入中间
+     *
      * @param index 插入的索引位置
-     * @param data 插入数据
+     * @param data  插入数据
      */
     public void insertLinked(int index, int data) {
         // 初始化链表
@@ -90,7 +131,7 @@ public class LinkedList {
      * 再通过temp 不为空（节点有数据）时，打印此时的data
      * 并将next节点赋值到临时链表对象，再次进行循环验证和打印
      */
-    public void printLinkedList(){
+    public void printLinkedList() {
         Node temp = head;
         while (temp != null) {
             System.out.println(temp.data);
