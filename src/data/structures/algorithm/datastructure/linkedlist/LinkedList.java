@@ -1,6 +1,9 @@
 package data.structures.algorithm.datastructure.linkedlist;
 
 /**
+ *
+ * 需要先深刻理解抽象概念的定义，才能逐步击破
+ *
  * 链表初始化类
  * and CRUD method
  * 方法中的参数 index 为 从头节点开始 获取第 index 个 next 指针
