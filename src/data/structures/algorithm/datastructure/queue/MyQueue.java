@@ -15,7 +15,7 @@ public class MyQueue {
     /**
      * 初始化数组 在构造器中装载新数组
      */
-    private int[] array;
+    private final int[] array;
     /**
      * 队头元素
      */
