@@ -34,7 +34,7 @@ public class MyQueue {
         this.array = new int[size];
     }
 
-    /**
+    /**m
      * 入队操作
      * 先判断队头和队尾元素 指向的 下一个 下标是否相同 相同则队列满 ** 最后一个元素 的 下一个索引 为 队尾 **
      * 成功入队后，队尾元素下标执行 (rear + 1) % array.length 动态变化
