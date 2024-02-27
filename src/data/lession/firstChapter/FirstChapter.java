@@ -117,25 +117,38 @@ public class FirstChapter {
      * @return final fishNumber
      */
     int solution(int[] size, int[] dir) {
+        // 鱼的个数
         final int fishNumber = size.length;
+        // 向左为0
         final int left = 0;
+        // 向右为1
         final int right = 1;
+        // 定义栈，存放🐟的索引
         Stack<Integer> stack = new Stack<Integer>();
         for (int i = 0; i < fishNumber; i++) {
+            // 新进的🐟的运动方向
             int currFishDir = dir[i];
+            // 新进的🐟的大小
             int currFishSize = size[i];
+            // 是否被吃 否
             boolean hasEat = false;
             while (!stack.empty() && dir[stack.peek()] == right && currFishDir == left) {
+                // 1.栈中🐟不为空 栈顶🐟的方向向右，新进的🐟向左
                 if (currFishSize < size[stack.peek()]) {
+                    // 栈中🐟吃掉新来🐟
                     hasEat = true;
+                    // 跳出while循环，继续下新来的🐟
                     break;
                 }
+                // 如果上述条件不满足则栈中🐟被吃掉，弹出栈顶，继续循环判断下一个栈顶🐟是否大于新来🐟 直至栈内🐟全被吃（空栈不进行while循环）或 新进🐟还是被吃掉
                 stack.pop();
             }
             if (!hasEat) {
+                // 此次for里的while循环结束，或没进入while循环即全新🐟进栈！
                 stack.push(i);
             }
         }
+        // 返回栈的大小（🐟个数）
         return stack.size();
     }
 
