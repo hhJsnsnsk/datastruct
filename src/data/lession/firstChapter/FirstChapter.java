@@ -15,7 +15,7 @@ public class FirstChapter {
      * 解释：()，()()，(())是合法的。)(，()(，(()是非法的。
      * 请你实现一个函数，来判断给定的字符串是否合法。
      * boolean isValid(String s);
-     *
+     * 栈中内容一样，计数器优化 不一样则存放内容
      * @param s input string
      * @return 栈元素是否为空
      */
