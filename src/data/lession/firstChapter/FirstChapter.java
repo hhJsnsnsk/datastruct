@@ -16,6 +16,7 @@ public class FirstChapter {
      * 请你实现一个函数，来判断给定的字符串是否合法。
      * boolean isValid(String s);
      * 栈中内容一样，计数器优化 不一样则存放内容
+     *
      * @param s input string
      * @return 栈元素是否为空
      */
@@ -97,15 +98,54 @@ public class FirstChapter {
                 return false;
             }
         }
-            return stack.empty();
+        return stack.empty();
+    }
+
+    /**
+     * 例 2：大鱼吃小鱼
+     * 【题目】在水中有许多鱼，可以认为这些鱼停放在 x 轴上。再给定两个数组 Size，Dir，Size[i] 表示第 i 条鱼的大小，
+     * Dir[i] 表示鱼的方向 （0 表示向左游，1 表示向右游）。这两个数组分别表示鱼的大小和游动的方向，并且两个数组的长度相等。
+     * 鱼的行为符合以下几个条件:
+     * 所有的鱼都同时开始游动，每次按照鱼的方向，都游动一个单位距离；
+     * 当方向相对时，大鱼会吃掉小鱼；
+     * 鱼的大小都不一样。
+     * 输入：Size = [4, 2, 5, 3, 1], Dir = [1, 1, 0, 0, 0]
+     * 输出：3
+     * 请完成以下接口来计算还剩下几条鱼？
+     * int solution(int[] Size, int[] Dir);
+     *
+     * @return final fishNumber
+     */
+    int solution(int[] size, int[] dir) {
+        final int fishNumber = size.length;
+        final int left = 0;
+        final int right = 1;
+        Stack<Integer> stack = new Stack<Integer>();
+        for (int i = 0; i < fishNumber; i++) {
+            int currFishDir = dir[i];
+            int currFishSize = size[i];
+            boolean hasEat = false;
+            while (!stack.empty() && dir[stack.peek()] == right && currFishDir == left) {
+                if (currFishSize < size[stack.peek()]) {
+                    hasEat = true;
+                    break;
+                }
+                stack.pop();
+            }
+            if (!hasEat) {
+                stack.push(i);
+            }
         }
-
-
+        return stack.size();
+    }
 
     public static void main(String[] args) {
         FirstChapter q = new FirstChapter();
+        System.out.println("================例一================");
         System.out.println(q.isValid("(()()(()))"));
         System.out.println(q.isValid2("()[]{}"));
         System.out.println(q.isValid2("(]"));
+        System.out.println("================例二================");
+        System.out.println(q.solution(new int[]{4, 2, 5, 3, 1}, new int[]{1, 1, 0, 0, 0}));
     }
 }
