@@ -4,7 +4,7 @@ package cartoonalgo.datastruct;
  * @author starrysky
  */
 public class NodeDemo {
-    private static class Node{
+    private static class Node {
         // 存放数据
         int data;
         // next指针
@@ -29,10 +29,11 @@ public class NodeDemo {
      * 尾部插入（当index == 链表长度size）：1️⃣ 原last的next赋值为插入的节点 2️⃣ 新last赋值为插入的节点
      * 中间插入： 1️⃣ 取得插入节点位置的前置节点，通过从头节点遍历到插入位置-1 2️⃣ 插入节点的next指针指向的原位置（前节点）的next 3️⃣ 前置节点的next赋值为插入节点
      * 记录 链表长度 size ++
+     *
      * @param data
      * @param index
      */
-    public void insert(int data, int index){
+    public void insert(int data, int index) {
         // 判断index，index == size 代表插入到尾节点。所以判断条件为 ">"
         if (index < 0 || index > size) {
             throw new IndexOutOfBoundsException("超出链表长度范围");
@@ -58,11 +59,40 @@ public class NodeDemo {
             preNode.next = insertNode;
         }
         // 插入后记录链表长度 +1
-        size ++;
+        size++;
+    }
+
+    public Node remove(int index) throws Exception {
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException("超出链表长度");
+        }
+        Node removedNode = null;
+
+        if (index == 0) {
+            // 删除头节点
+            removedNode = head;
+            head = head.next;
+        } else if (index == size - 1) {
+            // 删除尾节点
+            Node prevNode = get(index - 1);
+            removedNode = prevNode.next;
+            // 原尾节点指向null
+            prevNode.next = null;
+            last = prevNode;
+        } else {
+            // 删除中间节点
+            Node prevNode = get(index - 1);
+            Node nextNode = prevNode.next.next;
+            removedNode = prevNode.next;
+            prevNode.next = nextNode;
+        }
+        size--;
+        return removedNode;
     }
 
     /**
      * 链表查找元素
+     *
      * @param index
      * @return
      */
@@ -83,9 +113,9 @@ public class NodeDemo {
      * 输出链表输出
      * 1️⃣取得头节点，2️⃣使用while循环，打印一个节点后，赋值temp为下一个节点，依此循环。知道节点的next指针指向null
      */
-    private void output(){
+    private void output() {
         Node temp = head;
-        while (temp!=null) {
+        while (temp != null) {
             System.out.println(temp);
             temp = temp.next;
         }
