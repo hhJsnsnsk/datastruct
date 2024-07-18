@@ -49,7 +49,7 @@ public class NodeDemo {
             head = insertNode;
         } else if (index == size) {
             // 插入尾节点
-            insertNode = last.next;
+            last.next = insertNode;
             last = insertNode;
         } else {
             // 插入中间
@@ -116,8 +116,21 @@ public class NodeDemo {
     private void output() {
         Node temp = head;
         while (temp != null) {
-            System.out.println(temp);
+            System.out.println(temp.data);
             temp = temp.next;
         }
+    }
+
+    public static void main(String[] args) throws Exception {
+        NodeDemo demo = new NodeDemo();
+        demo.insert(3,0);
+        demo.insert(7,1);
+        demo.insert(6,2);
+        demo.insert(8,3);
+        demo.insert(0,4);
+        demo.insert(2,5);
+        demo.output();
+        demo.remove(0);
+        demo.output();
     }
 }
