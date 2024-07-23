@@ -3,6 +3,7 @@ package cartoonalgo.datastruct;
 import java.util.Arrays;
 
 /**
+ * 基于链表实现栈
  * @author starrysky
  */
 public class LinkedNodeClass {
