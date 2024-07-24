@@ -1,6 +1,7 @@
 package cartoonalgo.datastruct;
 
 /**
+ * 实现链表数据结构
  * @author starrysky
  */
 public class NodeDemo {
