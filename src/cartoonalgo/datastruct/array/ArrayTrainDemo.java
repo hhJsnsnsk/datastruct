@@ -1,4 +1,4 @@
-package cartoonalgo.datastruct;
+package cartoonalgo.datastruct.array;
 
 /**
  * @author starrysky
