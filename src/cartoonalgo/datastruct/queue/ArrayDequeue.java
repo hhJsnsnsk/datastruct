@@ -36,4 +36,13 @@ public class ArrayDequeue {
         return size() == 0;
     }
 
+    /**
+     * 返回数组长度
+     * @return nums
+     */
+    public int capacity(){
+        return queue.length;
+    }
+
+
 }
