@@ -18,4 +18,12 @@ public class ArrayDequeue {
         queSize = front = 0;
     }
 
+    /**
+     * 返回队列长度
+     * @return num
+     */
+    public int size(){
+        return queSize;
+    }
+
 }
