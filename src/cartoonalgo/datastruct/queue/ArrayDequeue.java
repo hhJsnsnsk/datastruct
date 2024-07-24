@@ -20,10 +20,20 @@ public class ArrayDequeue {
 
     /**
      * 返回队列长度
+     *
      * @return num
      */
-    public int size(){
+    public int size() {
         return queSize;
+    }
+
+    /**
+     * 判断队列是否为空
+     *
+     * @return boolean
+     */
+    public boolean isEmpty() {
+        return size() == 0;
     }
 
 }
