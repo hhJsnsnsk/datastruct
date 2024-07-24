@@ -41,13 +41,16 @@ public class ArrayQueue {
         return size() == 0;
     }
 
+    /**
+     * 获取数组长度
+     * @return length
+     */
     public int capacity() {
         return nums.length;
     }
 
     /**
      * 获取队首元素
-     *
      * @return num
      */
     public int peek() {

@@ -216,6 +216,4 @@ public class LinkedListDequeue {
             System.out.println(dequeue.toArray()[i]);
         }
     }
-
-
 }
