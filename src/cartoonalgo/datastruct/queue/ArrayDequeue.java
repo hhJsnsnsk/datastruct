@@ -2,6 +2,7 @@ package cartoonalgo.datastruct.queue;
 
 /**
  * 数组实现双向队列
+ *
  * @author starrysky
  */
 public class ArrayDequeue {
@@ -12,5 +13,9 @@ public class ArrayDequeue {
     // 队首指针索引
     private int front;
 
+    public ArrayDequeue(int capacity) {
+        queue = new int[capacity];
+        queSize = front = 0;
+    }
 
 }
