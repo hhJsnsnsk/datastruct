@@ -1,6 +1,4 @@
-package cartoonalgo.datastruct;
-
-import java.util.Arrays;
+package cartoonalgo.datastruct.queue;
 
 /**
  * 环形数组实现队列

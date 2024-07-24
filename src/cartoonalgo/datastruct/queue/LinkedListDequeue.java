@@ -1,4 +1,4 @@
-package cartoonalgo.datastruct;
+package cartoonalgo.datastruct.queue;
 
 /**
  * 链表实现双向队列

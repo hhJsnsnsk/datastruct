@@ -1,4 +1,4 @@
-package cartoonalgo.datastruct;
+package cartoonalgo.datastruct.linked;
 
 /**
  * 实现链表数据结构
