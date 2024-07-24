@@ -53,6 +53,10 @@ public class ArrayDequeue {
         return (front + capacity()) % capacity();
     }
 
+    /**
+     * 入队首
+     * @param num 插入元素
+     */
     public void pushFirst(int num) {
         // TODO 满异常处理
 
@@ -63,6 +67,10 @@ public class ArrayDequeue {
         // TODO 长度+
     }
 
+    /**
+     * 入队尾
+     * @param num 插入元素
+     */
     public void pushLast(int num) {
         // TODO 满异常处理
 
@@ -95,16 +103,28 @@ public class ArrayDequeue {
         return 1;
     }
 
+    /**
+     * 返回队首
+     * @return num
+     */
     public int peekFirst(){
 
         return 1;
     }
 
+    /**
+     * 返回队尾
+     * @return num
+     */
     public int peekLast() {
 
         return 1;
     }
 
+    /**
+     * 返回数组
+     * @return num []
+     */
     public int[] toArray() {
 
         return new int[1];
