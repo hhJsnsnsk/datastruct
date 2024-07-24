@@ -44,5 +44,70 @@ public class ArrayDequeue {
         return queue.length;
     }
 
+    /**
+     * 返回队首索引
+     * @param front 输入获取索引
+     * @return num
+     */
+    public int index(int front) {
+        return (front + capacity()) % capacity();
+    }
+
+    public void pushFirst(int num) {
+        // TODO 满异常处理
+
+        // TODO 空队列处理
+
+        // TODO 入队
+
+        // TODO 长度+
+    }
+
+    public void pushLast(int num) {
+        // TODO 满异常处理
+
+        // TODO 空队列处理
+
+        // TODO 入队
+
+        // TODO 长度+
+    }
+    public int popFirst() {
+        // TODO 满异常处理
+
+        // TODO 空队列处理
+
+        // TODO 入队
+
+        // TODO 长度+
+
+        return 1;
+    }
+    public int popLast() {
+        // TODO 满异常处理
+
+        // TODO 空队列处理
+
+        // TODO 入队
+
+        // TODO 长度+
+
+        return 1;
+    }
+
+    public int peekFirst(){
+
+        return 1;
+    }
+
+    public int peekLast() {
+
+        return 1;
+    }
+
+    public int[] toArray() {
+
+        return new int[1];
+    }
 
 }
